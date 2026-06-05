@@ -176,5 +176,291 @@
         </div>
       </div>
     </section>
+
+    <!-- Experience/ previous work -->
+
+    <section id="experience" class="section-padding bg-light-custom">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <p class="section-label">My Background</p>
+          <h2 class="section-title">Experience &amp; Education</h2>
+          <div class="section-divider mx-auto"></div>
+        </div>
+
+        <!-- Accordion: Work + Education tabs -->
+        <ul
+          class="nav nav-pills justify-content-center mb-4 exp-tabs"
+          id="expTabs"
+          role="tablist"
+        >
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link active exp-tab-btn"
+              id="work-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#work"
+              type="button"
+              role="tab"
+            >
+              Work Experience
+            </button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button
+              class="nav-link"
+              id="edu-tab"
+              data-bs-toggle="pill"
+              data-bs-target="#education"
+              type="button"
+              role="tab"
+            >
+              Education
+            </button>
+          </li>
+        </ul>
+
+        <div class="tab-content" id="expTabContent">
+          <!-- WORK TAB -->
+          <div class="tab-pane" id="work" role="tabpanel">
+            <div class="accordion" id="workAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#job1"
+                  >
+                    <div class="d-flex w-100 align-items-start gap-3">
+                      <div class="job-icon"><i class="bi bi-bag-fill"></i></div>
+                      <div>
+                        <strong>Guest Advocate</strong>
+                        <span class="job-company">Target — Keizer, OR</span>
+                        <span class="job-date">Aug 2018 – Present</span>
+                      </div>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="job1"
+                  class="accordion-collapse"
+                  data-bs-parent="#workAccordion"
+                >
+                  <div class="accordion-body">
+                    <ul class="exp-list">
+                      <li>
+                        Resolved high-volume real-time operational issues by
+                        identifying root causes and delivering efficient
+                        solutions under pressure — directly transferable to
+                        platform incident triage and troubleshooting.
+                      </li>
+                      <li>
+                        Identified recurring process inefficiencies and proposed
+                        improvements; collaborated cross-functionally to
+                        maintain operational performance.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#job2"
+                  >
+                    <div class="d-flex w-100 align-items-start gap-3">
+                      <div class="job-icon">
+                        <i class="bi"></i>
+                      </div>
+                      <div>
+                        <strong>Resident Assistant</strong>
+                        <span class="job-company"
+                          >PSU ResLife — Portland, OR</span
+                        >
+                        <span class="job-date">Aug 2021 – Jun 2023</span>
+                      </div>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="job2"
+                  class="accordion-collapse"
+                  data-bs-parent="#workAccordion"
+                >
+                  <div class="accordion-body">
+                    <ul class="exp-list">
+                      <li>
+                        Managed complex, time-sensitive situations requiring
+                        rapid decision-making, structured documentation, and
+                        clear escalation — skills directly applicable to
+                        incident management and on-call response.
+                      </li>
+                      <li>
+                        Served as liaison between residents and stakeholders:
+                        gathered requirements, mediated resolutions, and
+                        balanced multiple concurrent priorities.
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- EDUCATION TAB -->
+          <div class="tab-pane" id="education" role="tabpanel">
+            <div class="accordion exp-accordion" id="eduAccordion">
+              <div class="accordion-item">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#edu1"
+                  >
+                    <div class="d-flex w-100 align-items-start gap-3">
+                      <div class="job-icon">
+                        <i class="bi"></i>
+                      </div>
+                      <div>
+                        <strong>Portland State University</strong>
+                        <span class="job-company"
+                          >B.S. Computer Science &amp; B.A. World Languages:
+                          German</span
+                        >
+                        <span class="job-date">Sep 2020 – Jun 2026</span>
+                      </div>
+                    </div>
+                  </button>
+                </h2>
+                <div
+                  id="edu1"
+                  class="accordion-collapse"
+                  data-bs-parent="#eduAccordion"
+                >
+                  <div class="accordion-body">
+                    <p class="mb-2"><strong>Relevant Coursework:</strong></p>
+                    <div class="d-flex flex-wrap gap-2 mb-3">
+                      <span class="course-badge">Machine Learning</span>
+                      <span class="course-badge">Data Structures</span>
+                      <span class="course-badge">Algorithms</span>
+                      <span class="course-badge">Files &amp; Databases</span>
+                      <span class="course-badge"
+                        >Object-Oriented Programming</span
+                      >
+                      <span class="course-badge">Web &amp; Cloud Security</span>
+                    </div>
+                    <p class="mb-0">
+                      <strong>Honors:</strong> Phi Sigma Iota International
+                      Foreign Language Honor Society
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- projects  -->
+    <section id="projects" class="section-padding bg-white">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <p class="section-label">What I've Built</p>
+          <h2 class="section-title">Projects</h2>
+          <div class="section-divider mx-auto"></div>
+        </div>
+
+        <div class="row g-4">
+          <!-- jim bro project -->
+          <div class="col-lg-6">
+            <div class="project-card h-100">
+              <div class="project-card-header">
+                <div class="project-icon-wrap">
+                  <i class="bi bi-mic-fill project-icon"></i>
+                </div>
+                <div class="project-meta">
+                  <span class="project-date">April 2026</span>
+                </div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-title">
+                  Jim Bro — Voice-Powered Fitness Assistant
+                </h3>
+                <p class="project-desc">
+                  A voice-activated fitness assistant built on Dialogflow and
+                  Node.js. Handles real-time POST requests for distinct intent
+                  handlers, integrates the Wger Workout Manager REST API for
+                  live exercise data, and includes robust error handling with
+                  static fallback logic.
+                </p>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="tech-tag">Dialogflow</span>
+                  <span class="tech-tag">Node.js</span>
+                  <span class="tech-tag">Express</span>
+                  <span class="tech-tag">REST API</span>
+                  <span class="tech-tag">Render</span>
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <a
+                  href="https://github.com/cer5-hub"
+                  target="_blank"
+                  class="btn btn-project-github"
+                >
+                  <i class="bi bi-github me-2"></i>GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Pi dash cam project -->
+          <div class="col-lg-6">
+            <div class="project-card h-100">
+              <div class="project-card-header">
+                <div class="project-icon-wrap">
+                  <i class="bi bi-camera-video-fill project-icon"></i>
+                </div>
+                <div class="project-meta">
+                  <span class="project-date">December 2025</span>
+                  <span class="project-badge">Capstone</span>
+                </div>
+              </div>
+              <div class="project-card-body">
+                <h3 class="project-title">Raspberry Pi Smart Dash Cam</h3>
+                <p class="project-desc">
+                  A capstone project demonstrating end-to-end platform ownership
+                  — from hardware to data export. Built a real-time GPS data
+                  pipeline integrating a u-blox ZED-F9P GNSS module, with
+                  modular Python scripts for data logging, JSON/GPX export, and
+                  a web-based dashboard.
+                </p>
+                <div class="d-flex flex-wrap gap-2 mb-3">
+                  <span class="tech-tag">Python</span>
+                  <span class="tech-tag">Bash</span>
+                  <span class="tech-tag">Raspberry Pi</span>
+                  <span class="tech-tag">GPS/GNSS</span>
+                  <span class="tech-tag">Full-Stack</span>
+                </div>
+              </div>
+              <div class="project-card-footer">
+                <a
+                  href="https://github.com/cer5-hub"
+                  target="_blank"
+                  class="btn btn-project-github"
+                >
+                  <i class="bi bi-github me-2"></i>GitHub
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
