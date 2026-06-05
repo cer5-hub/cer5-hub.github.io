@@ -21,7 +21,7 @@
 
   <body>
     <!-- navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="main-nav">
+    <nav>
       <div class="container">
         <a class="navbar-brand brand-name" href="#hero">EC</a>
         <button
@@ -35,26 +35,53 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <div class="collapse navbar-collapse justify-content-end" id="navMenu">
-          <ul class="navbar-nav gap-1">
-            <li class="nav-item">
-              <a class="nav-link nav-pill" href="#about">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-pill" href="#experience">Experience</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-pill" href="#projects">Projects</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-pill" href="#skills">Skills</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link nav-pill" href="#contact">Contact</a>
-            </li>
-          </ul>
-        </div>
+        <ul>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#experience">Experience</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#projects">Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#skills">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
       </div>
     </nav>
+
+    <!-- main -->
+    <section id="main">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-7 main-text">
+            <p class="main-eyebrow">Hello, I'm</p>
+            <h1 class="main-name">Erika Cervantes</h1>
+            <h2 class="main-title">Software &amp; Web Developer</h2>
+            <p class="main-sub">
+              Computer Science + German Studies student at Portland State
+              University, building full-stack solutions from hardware pipelines
+              to voice-powered apps.
+            </p>
+            <div class="d-flex gap-3 flex-wrap mt-4">
+              <a href="#projects" class="btn">View My Work</a>
+              <a href="#contact" class="btn">Get In Touch</a>
+            </div>
+          </div>
+          <div class="col-lg-5 d-none d-lg-flex justify-content-center">
+            <div class="main-avatar-ring">
+              <div class="main-avatar-inner">
+                <span class="main-initials">EC</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
