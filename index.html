@@ -21,7 +21,7 @@
 
   <body>
     <!-- navbar -->
-    <nav>
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="main-nav">
       <div class="container">
         <a class="navbar-brand brand-name" href="#hero">EC</a>
         <button
@@ -35,48 +35,52 @@
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <ul>
-          <li class="nav-item">
-            <a class="nav-link" href="#about">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#experience">Experience</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#projects">Projects</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#skills">Skills</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#contact">Contact</a>
-          </li>
-        </ul>
+        <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+          <ul class="navbar-nav gap-1">
+            <li class="nav-item">
+              <a class="nav-link nav-pill" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-pill" href="#experience">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-pill" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-pill" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link nav-pill" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
       </div>
     </nav>
 
     <!-- main -->
-    <section id="main">
+    <section id="hero" class="hero-section d-flex align-items-center">
       <div class="container">
         <div class="row align-items-center">
-          <div class="col-lg-7 main-text">
-            <p class="main-eyebrow">Hello, I'm</p>
-            <h1 class="main-name">Erika Cervantes</h1>
-            <h2 class="main-title">Software &amp; Web Developer</h2>
-            <p class="main-sub">
+          <div class="col-lg-7 hero-text">
+            <p class="hero-eyebrow">Hello, I'm</p>
+            <h1 class="hero-name">Erika Cervantes</h1>
+            <h2 class="hero-title">Software &amp; Web Developer</h2>
+            <p class="hero-sub">
               Computer Science + German Studies student at Portland State
               University, building full-stack solutions from hardware pipelines
               to voice-powered apps.
             </p>
             <div class="d-flex gap-3 flex-wrap mt-4">
-              <a href="#projects" class="btn">View My Work</a>
-              <a href="#contact" class="btn">Get In Touch</a>
+              <a href="#projects" class="btn btn-primary-custom"
+                >View My Work</a
+              >
+              <a href="#contact" class="btn btn-outline-custom">Get In Touch</a>
             </div>
           </div>
           <div class="col-lg-5 d-none d-lg-flex justify-content-center">
-            <div class="main-avatar-ring">
-              <div class="main-avatar-inner">
-                <span class="main-initials">EC</span>
+            <div class="hero-avatar-ring">
+              <div class="hero-avatar-inner">
+                <span class="hero-initials">EC</span>
               </div>
             </div>
           </div>
@@ -85,19 +89,19 @@
     </section>
 
     <!-- about me section  -->
-
     <section id="about" class="section-padding bg-white">
       <div class="container">
-        <div class="section-header">
+        <div class="section-header text-center mb-5">
           <p class="section-label">Get To Know Me</p>
           <h2 class="section-title">About Me</h2>
-          <div class="section-divider"></div>
+          <div class="section-divider mx-auto"></div>
         </div>
         <div class="row align-items-center g-5">
           <div class="col-lg-5 text-center">
             <div class="about-photo-frame mx-auto">
               <div class="about-photo-placeholder">
-                <p class="about-photo-hint">headshot photo here,</p>
+                <i class="bi bi-person-fill about-photo-icon"></i>
+                <p class="about-photo-hint">Add your photo here</p>
               </div>
             </div>
           </div>
@@ -122,7 +126,7 @@
             </p>
             <p class="about-body">
               When I'm not coding, I'm a member of Phi Sigma Iota International
-              Foreign Language Honor Society, and bring the same discipline and
+              Foreign Language Honor Society and bring the same discipline and
               precision I apply to language learning into every engineering
               challenge.
             </p>
@@ -251,7 +255,7 @@
                       <li>
                         Resolved high-volume real-time operational issues by
                         identifying root causes and delivering efficient
-                        solutions under pressure — directly transferable to
+                        solutions under pressure, directly transferable to
                         platform incident triage and troubleshooting.
                       </li>
                       <li>
@@ -296,8 +300,8 @@
                       <li>
                         Managed complex, time-sensitive situations requiring
                         rapid decision-making, structured documentation, and
-                        clear escalation — skills directly applicable to
-                        incident management and on-call response.
+                        clear escalation, skills directly applicable to incident
+                        management and on-call response.
                       </li>
                       <li>
                         Served as liaison between residents and stakeholders:
@@ -311,7 +315,7 @@
             </div>
           </div>
 
-          <!-- EDUCATION TAB -->
+          <!-- education tab -->
           <div class="tab-pane" id="education" role="tabpanel">
             <div class="accordion exp-accordion" id="eduAccordion">
               <div class="accordion-item">
@@ -434,9 +438,9 @@
               <div class="project-card-body">
                 <h3 class="project-title">Raspberry Pi Smart Dash Cam</h3>
                 <p class="project-desc">
-                  A capstone project demonstrating end-to-end platform ownership
-                  — from hardware to data export. Built a real-time GPS data
-                  pipeline integrating a u-blox ZED-F9P GNSS module, with
+                  A capstone project demonstrating end-to-end platform
+                  ownership, from hardware to data export. Built a real-time GPS
+                  data pipeline integrating a u-blox ZED-F9P GNSS module, with
                   modular Python scripts for data logging, JSON/GPX export, and
                   a web-based dashboard.
                 </p>
@@ -458,6 +462,263 @@
                 </a>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- skills -->
+    <section id="skills" class="section-padding bg-light-custom">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <p class="section-label">What I Work With</p>
+          <h2 class="section-title">Technical Skills</h2>
+          <div class="section-divider mx-auto"></div>
+        </div>
+
+        <!-- image carousel of skill categories -->
+        <div
+          id="skillsCarousel"
+          class="carousel slide mb-5"
+          data-bs-ride="carousel"
+        >
+          <div class="carousel-indicators">
+            <button
+              type="button"
+              data-bs-target="#skillsCarousel"
+              data-bs-slide-to="0"
+              class="active"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#skillsCarousel"
+              data-bs-slide-to="1"
+            ></button>
+            <button
+              type="button"
+              data-bs-target="#skillsCarousel"
+              data-bs-slide-to="2"
+            ></button>
+          </div>
+          <div class="carousel-inner skills-carousel-inner rounded">
+            <div class="carousel-item active">
+              <div
+                class="carousel-slide d-flex flex-column align-items-center justify-content-center"
+              >
+                <i class="bi bi-code-slash carousel-big-icon"></i>
+                <h4 class="carousel-slide-title">Languages</h4>
+                <div class="d-flex flex-wrap justify-content-center gap-2 mt-2">
+                  <span class="skill-pill">Python</span>
+                  <span class="skill-pill">Java</span>
+                  <span class="skill-pill">JavaScript</span>
+                  <span class="skill-pill">TypeScript</span>
+                  <span class="skill-pill">C</span>
+                  <span class="skill-pill">C++</span>
+                  <span class="skill-pill">Rust</span>
+                  <span class="skill-pill">SQL</span>
+                  <span class="skill-pill">Bash</span>
+                  <span class="skill-pill">HTML</span>
+                  <span class="skill-pill">CSS</span>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div
+                class="carousel-slide d-flex flex-column align-items-center justify-content-center"
+              >
+                <i class="bi bi-tools carousel-big-icon"></i>
+                <h4 class="carousel-slide-title">Tools &amp; Frameworks</h4>
+                <div class="d-flex flex-wrap justify-content-center gap-2 mt-2">
+                  <span class="skill-pill">Node.js</span>
+                  <span class="skill-pill">Express</span>
+                  <span class="skill-pill">PostgreSQL</span>
+                  <span class="skill-pill">REST APIs</span>
+                  <span class="skill-pill">Git / GitHub</span>
+                  <span class="skill-pill">Linux</span>
+                  <span class="skill-pill">Raspberry Pi</span>
+                  <span class="skill-pill">VS Code</span>
+                  <span class="skill-pill">Agile / Scrum</span>
+                </div>
+              </div>
+            </div>
+            <div class="carousel-item">
+              <div
+                class="carousel-slide d-flex flex-column align-items-center justify-content-center"
+              >
+                <i class="bi bi-person-workspace carousel-big-icon"></i>
+                <h4 class="carousel-slide-title">Soft Skills</h4>
+                <div class="d-flex flex-wrap justify-content-center gap-2 mt-2">
+                  <span class="skill-pill">Cross-functional Collaboration</span>
+                  <span class="skill-pill">Incident Triage</span>
+                  <span class="skill-pill">Technical Documentation</span>
+                  <span class="skill-pill">Stakeholder Communication</span>
+                  <span class="skill-pill">Multilingual</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button
+            class="carousel-control-prev carousel-ctrl"
+            type="button"
+            data-bs-target="#skillsCarousel"
+            data-bs-slide="prev"
+          >
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+          </button>
+          <button
+            class="carousel-control-next carousel-ctrl"
+            type="button"
+            data-bs-target="#skillsCarousel"
+            data-bs-slide="next"
+          >
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- contact me info -->
+    <section id="contact" class="section-padding bg-white">
+      <div class="container">
+        <div class="section-header text-center mb-5">
+          <p class="section-label">Let's Connect</p>
+          <h2 class="section-title">Contact Me</h2>
+          <div class="section-divider mx-auto"></div>
+        </div>
+
+        <div class="row g-5 justify-content-center">
+          <div class="col-lg-5">
+            <div class="contact-info-card">
+              <h4 class="contact-info-title">Get In Touch</h4>
+              <p class="text-muted mb-4">
+                I'm currently looking for new opportunities. Whether you have a
+                question or just want to say hi, my inbox is always open.
+              </p>
+              <div class="d-flex flex-column gap-3">
+                <a
+                  href="mailto:ErikaCervantesArellano@gmail.com"
+                  class="contact-link"
+                >
+                  <i class="bi bi-envelope-fill contact-link-icon"></i>
+                  <span>ErikaCervantesArellano@gmail.com</span>
+                </a>
+                <a href="tel:9717014899" class="contact-link">
+                  <i class="bi bi-telephone-fill contact-link-icon"></i>
+                  <span>(971) 701-4899</span>
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/cervantes-erika/"
+                  target="_blank"
+                  class="contact-link"
+                >
+                  <i class="bi bi-linkedin contact-link-icon"></i>
+                  <span>linkedin.com/in/cervantes-erika</span>
+                </a>
+                <a
+                  href="https://github.com/cer5-hub"
+                  target="_blank"
+                  class="contact-link"
+                >
+                  <i class="bi bi-github contact-link-icon"></i>
+                  <span>github.com/cer5-hub</span>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6">
+            <form id="contactForm" class="contact-form" novalidate>
+              <div class="row g-3">
+                <div class="col-sm-6">
+                  <label class="form-label contact-form-label" for="contactName"
+                    >Full Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control contact-input"
+                    id="contactName"
+                    placeholder="Jane Smith"
+                    required
+                  />
+                  <div class="invalid-feedback">Please enter your name.</div>
+                </div>
+                <div class="col-sm-6">
+                  <label
+                    class="form-label contact-form-label"
+                    for="contactEmail"
+                    >Email Address</label
+                  >
+                  <input
+                    type="email"
+                    class="form-control contact-input"
+                    id="contactEmail"
+                    placeholder="jane@example.com"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please enter a valid email.
+                  </div>
+                </div>
+                <div class="col-12">
+                  <label
+                    class="form-label contact-form-label"
+                    for="contactSubject"
+                    >Subject</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control contact-input"
+                    id="contactSubject"
+                    placeholder="Opportunity / Collaboration / Hello"
+                    required
+                  />
+                  <div class="invalid-feedback">Please enter a subject.</div>
+                </div>
+                <div class="col-12">
+                  <label
+                    class="form-label contact-form-label"
+                    for="contactMessage"
+                    >Message</label
+                  >
+                  <textarea
+                    class="form-control contact-input"
+                    id="contactMessage"
+                    rows="5"
+                    placeholder="Tell me what's on your mind..."
+                    required
+                  ></textarea>
+                  <div class="invalid-feedback">Please enter a message.</div>
+                </div>
+                <div class="col-12">
+                  <button
+                    type="submit"
+                    class="btn btn-primary-custom w-100"
+                    id="submitBtn"
+                  >
+                    <span class="btn-text">Send Message</span>
+                    <span class="btn-spinner d-none">
+                      <span
+                        class="spinner-border spinner-border-sm me-2"
+                        role="status"
+                      ></span
+                      >Sending...
+                    </span>
+                  </button>
+                </div>
+                <div
+                  class="col-12"
+                  id="formSuccess"
+                  style="display: none !important"
+                >
+                  <div class="alert alert-success contact-alert">
+                    <i class="bi bi-check-circle-fill me-2"></i>
+                    Thanks for reaching out! I'll get back to you soon.
+                  </div>
+                </div>
+              </div>
+            </form>
           </div>
         </div>
       </div>
