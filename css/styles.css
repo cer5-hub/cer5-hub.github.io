@@ -24,7 +24,7 @@ html {
 }
 
 body {
-  font-family: Arial, sans-serif;
+  font-family: "Nunito", Arial, sans-serif;
   font-size: 1rem;
   line-height: 1.7;
   color: var(--text-body);
@@ -206,6 +206,16 @@ a:hover {
   font-weight: 700;
   color: #ffffff;
   line-height: 1;
+}
+
+.profile-photo {
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  margin: 0 auto 1.5rem;
 }
 .about-list {
   list-style: none;
