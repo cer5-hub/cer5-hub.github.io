@@ -34,8 +34,7 @@ contactForm.addEventListener("submit", function (e) {
   submitBtn.disabled = true;
   submitBtn.setAttribute("aria-busy", "true");
 
-  // async, will replace this if time woth real fetch
-  // Submit to Formspree
+  // Submiting responses to Formspree and forwarding to my email
   fetch(contactForm.action, {
     method: "POST",
     body: new FormData(contactForm),
