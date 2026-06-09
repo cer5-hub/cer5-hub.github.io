@@ -35,27 +35,42 @@ contactForm.addEventListener("submit", function (e) {
   submitBtn.setAttribute("aria-busy", "true");
 
   // async, will replace this if time woth real fetch
-  setTimeout(function () {
-    // Reset button state
-    btnLabel.classList.remove("d-none");
-    btnSpinner.classList.add("d-none");
-    submitBtn.disabled = false;
-    submitBtn.removeAttribute("aria-busy");
+  // Submit to Formspree
+  fetch(contactForm.action, {
+    method: "POST",
+    body: new FormData(contactForm),
+    headers: { Accept: "application/json" },
+  })
+    .then(function (response) {
+      btnLabel.classList.remove("d-none");
+      btnSpinner.classList.add("d-none");
+      submitBtn.disabled = false;
+      submitBtn.removeAttribute("aria-busy");
 
-    // Reset form and show success message
-    contactForm.reset();
-    contactForm.classList.remove("was-validated");
-    formSuccess.classList.remove("d-none");
-
-    // Move focus to success message for screen readers
-    formSuccess.setAttribute("tabindex", "-1");
-    formSuccess.focus();
-
-    // Hide after 6 seconds
-    setTimeout(function () {
-      formSuccess.classList.add("d-none");
-    }, 6000);
-  }, 1500);
+      if (response.ok) {
+        contactForm.reset();
+        contactForm.classList.remove("was-validated");
+        formSuccess.classList.remove("d-none");
+        formSuccess.setAttribute("tabindex", "-1");
+        formSuccess.focus();
+        setTimeout(function () {
+          formSuccess.classList.add("d-none");
+        }, 6000);
+      } else {
+        alert(
+          "Something went wrong. Please email me directly at ErikaCervantesArellano@gmail.com"
+        );
+      }
+    })
+    .catch(function () {
+      btnLabel.classList.remove("d-none");
+      btnSpinner.classList.add("d-none");
+      submitBtn.disabled = false;
+      submitBtn.removeAttribute("aria-busy");
+      alert(
+        "Network error. Please email me directly at ErikaCervantesArellano@gmail.com"
+      );
+    });
 });
 
 var revealEls = document.querySelectorAll("section");
@@ -95,12 +110,10 @@ function updateActiveLink() {
     if (link) {
       if (scrollY >= top && scrollY < bottom) {
         link.setAttribute("aria-current", "page");
-        link.style.background = "var(--ice-blue)";
-        link.style.color = "var(--dark-slate)";
+        link.classList.add("active-link");
       } else {
         link.removeAttribute("aria-current");
-        link.style.background = "";
-        link.style.color = "";
+        link.classList.remove("active-link");
       }
     }
   });

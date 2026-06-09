@@ -1,7 +1,7 @@
 :root {
   --dark-slate: #1f2a33;
-  --midnight: hsl(240, 69%, 28%);
-  --midnight-dark: #050531;
+  --midnight: #161678;
+  --midnight-dark: #0b0b40;
   --ice-blue: #8fbcd4;
   --ice-blue-light: #d4eaf5;
   --text-dark: #1a1a2e;
@@ -62,7 +62,7 @@ a:hover {
 }
 
 .site-nav-link {
-  color: rgba(255, 255, 255, 0.85) !important;
+  color: rgb(255, 255, 255) !important;
   font-size: 0.9rem;
   font-weight: 500;
   padding: 0.4rem 0.9rem !important;
@@ -70,9 +70,10 @@ a:hover {
   transition: background 0.15s, color 0.15s;
 }
 .site-nav-link:hover,
-.site-nav-link:focus {
+.site-nav-link:focus,
+.site-nav-link.active-link {
   background: var(--ice-blue);
-  color: var(--dark-slate) !important;
+  color: var(--midnight-dark) !important;
 }
 
 /* sections */
